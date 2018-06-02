@@ -9,6 +9,7 @@
 namespace Infrastructure\Service;
 
 
+use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 
 class SerializerService{
@@ -36,6 +37,13 @@ class SerializerService{
         }
     }
 
+    public function  toJsonGroups($data, array $groups = ['default']){
+        return $this->serializer->serialize(
+            $data,
+            'json',
+            SerializationContext::create()->setGroups($groups)
+        );
+    }
 
 
 }

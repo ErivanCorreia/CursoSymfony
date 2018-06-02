@@ -20,5 +20,10 @@ interface OportunidadeServiceInterface
      */
     public function salvar(Oportunidade $oportunidade);
 
+    /**
+     * @return array
+     */
+    public function listarTudo();
+
 
 }

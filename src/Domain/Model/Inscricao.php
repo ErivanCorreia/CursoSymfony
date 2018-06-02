@@ -35,4 +35,6 @@ class Inscricao
      * @var boolean
      */
     private $ativa;
+
+    
 }

@@ -14,7 +14,7 @@ class HabilidadeTecnica
     /**
      * @var int
      */
-    private $idHahilidadeTecnica;
+    private $idHabilidadeTecnica;
 
     /**
      * @var string

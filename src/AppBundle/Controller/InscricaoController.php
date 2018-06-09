@@ -10,6 +10,7 @@ namespace AppBundle\Controller;
 
 
 use Domain\Model\Inscricao;
+use Presentation\DataTransferObject\InscricaoDTO;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,14 +25,14 @@ class InscricaoController extends Controller
     public function inscreverAction(Request $request)
     {
       $serializeService = $this->get('infra.serializer.service');
-
+      $inscricaoService = $this->get('app.inscricao.service');
       try{
-          $inscricao = $serializeService->converter($request->getContent(), Inscricao::class);
-          dump($inscricao); die;
+          $inscricao = $serializeService->converter($request->getContent(), InscricaoDTO::class);
+          $resultado = $inscricaoService->inscrever($inscricao);
       }catch(\Exception $exception){
           return new Response($exception->getMessage(), 400);
       }
-      return new Response("Inscrição efetuada com sucesso !!");
+      return new Response($resultado);
     }
 
 }

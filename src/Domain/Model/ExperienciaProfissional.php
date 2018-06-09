@@ -14,7 +14,7 @@ class ExperienciaProfissional
     /**
      * @var int
      */
-    private $idExperiencialProficional;
+    private $idExperienciaProfissional;
 
     /**
      * @var string

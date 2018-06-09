@@ -41,6 +41,11 @@ class Candidato
     private $curriculo;
 
     /**
+     * @var string
+     */
+    private $cpf;
+
+    /**
      * @var Collection
      */
     private $habilidadesTecnicas;
@@ -48,5 +53,66 @@ class Candidato
     /**
      * @var Collection
      */
-    private $experienciasProficionais;
+    private $experienciasProfissionais;
+
+    /**
+     * @return string
+     */
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelefone()
+    {
+        return $this->telefone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurriculo()
+    {
+        return $this->curriculo;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getHabilidadesTecnicas()
+    {
+        return $this->habilidadesTecnicas;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getExperienciasProfissionais()
+    {
+        return $this->experienciasProfissionais;
+    }
+
+
+
+
+
 }
